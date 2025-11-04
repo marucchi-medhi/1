@@ -1,0 +1,379 @@
+ html {
+  scroll-behavior: smooth;
+} 
+
+header {
+    background:linear-gradient(#add8e6,#ffffff);
+    color:	#003366;
+    display:flex; /* 文字全体を横一列に */
+    font-weight:bold;
+}
+
+body {
+  margin:0;
+}
+
+
+/* heaaderの鹿実の写真 */
+.logo {
+    width:200px;
+    margin-top:20px;
+    opacity: 1; /* 初期は透明度100% */
+    transform: scale(1); /* 初期は拡大なし */
+    transition: all 0.3s ease;
+}
+
+
+.header-logo a:hover .logo {
+    opacity: 0.7; /* ホバー時に透明度70% */
+    transform: scale(1.1); /* ホバー時に少し拡大 */
+}
+
+/*マルッチーの設定　*/
+ul li img {
+    vertical-align: middle;  /* 画像と文字の縦の揃え */
+    height: 50px;             /* 高さを指定（必要に応じて） */
+    vertical-align: 2px;
+}
+
+
+.header-logo {
+    font-size:20px;
+    padding:30px;
+    text-align:center;
+}
+
+.header-list {
+    margin-left:auto; /*listだけを右寄せに*/
+}
+
+ul {
+    display:flex;
+     flex-wrap: nowrap;
+     
+}
+
+ul li {
+    list-style:none;
+    padding:33px 20px;;
+    text-align:left;
+}
+
+ul li a {
+    display:inline-block;
+    color:inherit; /*文字を色を変えない*/
+    text-decoration:none;/*アンダーバーを消す*/
+    transition: all 0.3s ease;/*0.3秒かけて滑らかに変化させる*/
+}
+
+ul li a:hover {
+    opacity:0.7;/*透明度を70%*/
+    transform:scale(1.1);/*文字の倍率*/
+    white-space: nowrap;/*改行しない*/
+}
+
+
+/* 上に戻るボタン */
+.pagetop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.pagetop:hover{
+   transform: scale(1.3);
+   transition: all 0.3s ease;
+}
+
+.pagetop__arrow img {
+  width: 50px;
+  height: auto;
+}
+
+.pagetop__arrow {
+  height: 30px;
+  width: 30px;
+}
+
+
+.pagetop__tooltip {
+  position: absolute;
+  bottom: 60px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #ffecb3; 
+  color: #d35400; 
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.pagetop:hover .pagetop__tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+
+
+/* next-year */
+/* トップページ */
+  .top-page {
+   background-color: #ec7063;
+box-shadow: 0 7px #922b21;
+color: #fff;
+
+  }
+
+/* ２年生 */
+.old-year {
+  background-color: #5dca88;
+  box-shadow: 0 7px #1a7940;
+}
+
+/* ３年生 */
+.next-year {
+  background-color: #5dade2;
+box-shadow: 0 7px #1b4f72;
+}
+
+.next-year, .top-page, .old-year {
+  margin:25px;
+  
+  opacity: 0.8;
+  color:#fff;
+   text-decoration:none;
+padding: 15px 40px;
+  border-radius:10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.next-year:hover, .top-page:hover, .old-year:hover {
+    transform: scale(1.1);
+    opacity:0.3;
+}
+
+.botan {
+text-align:center;
+}
+
+
+
+
+/* 授業紹介全体 */
+.jyu {
+  display: flex;
+  justify-content: center; /* 左右を中央に */
+  align-items: center;     /* 左右の高さを中央揃え */
+  margin: 50px;
+  gap: 40px;
+  height: 500px;           /* 左の画像と同じ高さに */
+}
+
+/* 左の画像ラッパー */
+.img {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  display: block;
+}
+
+
+
+.sukusyo {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sukusyo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  display: block;
+}
+
+
+/* 右側（説明＋先生） */
+.jyu-setumei {
+  display: flex;
+  flex-direction: column; /* 上下に並べる */
+  justify-content: center; /* 上下中央揃え */
+  align-items: center;     /* 横方向中央 */
+  height: 100%;            /* 親の高さに合わせる */
+}
+
+/* 授業説明ボックス */
+.study-box {
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 720px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* タイトル */
+.study-name {
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #dee7ec;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 説明文 */
+.study-syousai {
+  line-height: 1.6;
+}
+
+/* 担当先生タイトル */
+.tantou-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* 先生写真を横並び */
+.tantou-sensei {
+  display: flex;
+  gap: 20px;           /* 先生の間の余白 */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 1人の先生の写真＋名前 */
+.sensei {
+  display: flex;
+  flex-direction: column; /* 写真の下に名前 */
+  align-items: center;    /* 真ん中に揃える */
+  transform:translateY(0);
+}
+
+.sensei img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;     /* 丸くする */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-bottom: 8px;
+}
+
+.sensei-name {
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.year-setumei {
+  text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+  background-color:#00195e;
+  color:#ffffff;
+padding:100px  100px 0 100px;
+font-size:12px;
+}
+
+.footer-list {
+      display: flex;
+      
+}
+
+.tkg a:hover {
+  opacity:0.7;
+  transform: scale(1.1);
+}
+
+.tkg h2 {
+  border-bottom:2px solid #dee7ec;
+  padding-bottom: 10px;
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+.tkg a  {
+  display: inline-block; 
+  transition:all 0.5s ease;
+  
+}
+
+.tkg {
+  margin: 0 30px 30px 30px;
+}
+
+.footer_logo {
+width:250px;
+}
+
+.kts {
+  margin-left:auto;
+
+}
+
+.tkg a {
+  color:#fff;
+   text-decoration:none;
+   display: block;
+}
+
+.tkg p {
+  
+  margin-left:21px;
+}
+
+.sita {
+  margin-top:100px;
+  padding-bottom:3px;
+}
