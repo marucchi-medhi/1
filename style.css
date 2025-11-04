@@ -443,7 +443,7 @@ padding: 15px 40px;
 
 
 
-@media (max-height:650px) {
+@media (max-height:685px) {
   .popup {
     height:550px;
     width:850px;
